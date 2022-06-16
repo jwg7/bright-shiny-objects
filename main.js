@@ -3,10 +3,97 @@
 // └─────────────────┘
 
 
+function createUser(firstName, lastName) {
+let user = {
+firstName: firstName,
+lastName: lastName,
+}
+return user
+}
+
+console.log(createUser("Abraham", "Lincoln"));
+
+////////////////////////////////////////////////////////
+
+let person = {
+    firstName:  "Bob",
+    lastName: "Slob"
+}
+
+function setAge(person, age) {
+ person.age = age
+ return person
+}
+
+console.log(setAge(person, 50));
+
+//////////////////////////////////////////////////////////
+
+function incrementAge(person) {
+person.age = person.age + 1
+return person
+}
+
+console.log(incrementAge(person));
 
 
+/////////////////////////////////////////////////////////
+
+let car = {
+    make: 'Ford',
+    model: 'Mustang',
+    year: 1969,
+    needsMaintenance: true
+}
 
 
+function fixCar(car) {
+car.needsMaintenance = false;
+return car
+}
+
+console.log(fixCar(car));
+
+/////////////////////////////////////////////////////////
+
+const student = {
+    name: 'Anthony DeRosa',
+    email: 'anthony.derosa@codeimmersives.com',
+    grades: [80, 100, 95]
+};
+
+let newGrades = [ 70, 75, 79];
+
+// solving using the concat method 
+function addGrades(student, grades) {
+student.grades = student.grades.concat(grades)
+return student
+}
+
+console.log(addGrades(student, newGrades));
+
+
+// another way to solve this is with the .push() method. In class, a For loop was used to demonstrate this.
+function addGrades1(student, newGrades) {
+    for(let i = 0; i < newGrades.length; i++) {
+student.grades.push(newGrades[i])
+    }
+    return student
+}
+
+console.log(addGrades1(student, newGrades))
+
+// Here's me attempting to use the .push() method without a FOR LOOP. I was able to make this work pushing only one new grade, but when i tried it with three, an array was pushed into the grades array. Any way to overcome this without the FOR LOOP?
+function addGrades2(student, newGrades) {
+student.grades.push(newGrades)
+return student
+}
+
+newGrades1 = 91
+
+console.log(addGrades2(student, newGrades1))
+
+////////////////////////////////////////////////////////
 
 
 
