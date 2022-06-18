@@ -123,12 +123,12 @@ const newToDo = {
     isComplete: false
 };
 
-function addToDo(toDos, newToDo) {
+function addTodo(toDos, newToDo) {
     toDos.push(newToDo)
     return toDos
 }
 
-console.log(addToDo(toDos, newToDo))
+console.log(addTodo(toDos, newToDo))
 
 /////////////////////////////////////////////////////////////
 
@@ -187,13 +187,16 @@ function updateReportCard(reportCard, x) {
 for (let i = 0; i < reportCard.grades.length; i++) {
     sum = sum + reportCard.grades[i]
 }
-reportCard.averageGrade = Math.round(sum / reportCard.grades.length)
+reportCard.averageGrade = sum / reportCard.grades.length
+return reportCard
 }
 
 updateReportCard(reportCard, 100);
 
 // Found out I dont need return to make the function work. I just console.logged reportCard to make sure the function did what it was supposed to do.
 console.log(reportCard);
+
+// I went back in to make a few changes after noticing npm test had a few discrepancies. While the code worked in terminal and was fine, the code needs to be written a certain way to pass the tests.
 
 
 
